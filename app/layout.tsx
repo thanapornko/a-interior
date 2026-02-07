@@ -30,16 +30,18 @@ export default function RootLayout({
       <body
         className={`${ptSerif.variable} ${ibm.variable} font-sans bg-[#FAF8F3] text-[#1C1C1C]`}
       >
+        {/* ===== NAVBAR ===== */}
         <Navbar />
 
         {/* ===== CONTENT ===== */}
         <main className='bg-[#FAF8F3]'>{children}</main>
 
         {/* ===== FOOTER ===== */}
-        <footer className='border-t border-black/10 bg-[#FAF8F3]/90'>
-          <div className='max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-10 text-sm'>
+        <footer className='border-t border-black/10 bg-[#FAF8F3]/95'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 py-6 grid gap-12 md:grid-cols-3 md:gap-10 text-sm'>
+            {/* BRAND */}
             <div>
-              <div className='text-lg font-semibold mb-3 '>A-Interior</div>
+              <div className='text-lg font-semibold mb-3'>A-Interior</div>
               <p className='text-black/60 leading-6'>
                 We bring interior concepts to life through expert construction
                 and built-in solutions. Focused on quality, function, and
@@ -47,12 +49,13 @@ export default function RootLayout({
               </p>
             </div>
 
+            {/* COMPANY */}
             <div>
               <p className='font-medium mb-3 text-gray-900'>Company</p>
               <ul className='space-y-2 text-black/60'>
                 <li>
                   <a href='/#service' className='hover:opacity-60'>
-                    Our Service
+                    Our Services
                   </a>
                 </li>
                 <li>
@@ -73,16 +76,20 @@ export default function RootLayout({
               </ul>
             </div>
 
+            {/* CONTACT */}
             <div>
               <p className='font-medium mb-3 text-gray-900'>Contact</p>
               <ul className='space-y-2 text-black/60'>
-                <li>52 Prachaniwet3 soi14/10 Thasai Muaeng Nontaburi 11000</li>
+                <li>
+                  52 Prachaniwet 3 Soi 14/10, Thasai, Mueang Nonthaburi 11000
+                </li>
                 <li>Tel: 081-633-2711, 081-646-3450</li>
                 <li>Line: 0816332711</li>
               </ul>
             </div>
           </div>
 
+          {/* COPYRIGHT */}
           <div className='text-center text-xs text-black/50 py-6 border-t border-black/5'>
             © 2026 A-Interior. All rights reserved.
           </div>

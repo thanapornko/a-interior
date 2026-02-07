@@ -9,19 +9,20 @@ export default function Navbar() {
   const showNav = pathname === '/';
 
   return (
-    <header className='sticky top-0 z-50 bg-[#FAF8F3]/90 backdrop-blur border-b border-black/5'>
-      <div className='max-w-7xl mx-auto px-6 py-5 flex items-center justify-between'>
-        {/* Logo */}
+    <header className='sticky top-0 z-40 bg-[#FAF8F3]/90 backdrop-blur border-b border-black/5'>
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between'>
+        {/* LOGO */}
         <Link href='/' aria-label='Go to homepage'>
           <Image
             src='/logoTransparent.png'
             alt='Luxury interior design'
-            width={120}
-            height={75}
+            width={110}
+            height={70}
             priority
           />
         </Link>
 
+        {/* DESKTOP NAV (HOME ONLY) */}
         {showNav && (
           <nav className='hidden md:flex gap-10 text-sm text-gray-900'>
             <a href='#service' className='hover:opacity-60'>
@@ -36,10 +37,10 @@ export default function Navbar() {
           </nav>
         )}
 
-        {/* CTA */}
+        {/* PORTFOLIO BUTTON (MOBILE + DESKTOP) */}
         <Link
           href='/portfolio'
-          className='rounded-full bg-[#4F5D2F] text-white px-5 py-2 text-sm hover:opacity-90'
+          className='inline-flex rounded-full bg-[#4F5D2F] text-white px-4 py-2 text-sm hover:opacity-90'
         >
           Portfolio
         </Link>

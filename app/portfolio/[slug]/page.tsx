@@ -13,7 +13,7 @@ export default async function ProjectDetailPage({
   if (!project) notFound();
 
   return (
-    <section className='max-w-6xl mx-auto px-6 py-20'>
+    <section className='max-w-6xl mx-auto px-6 py-10'>
       <h1 className='text-3xl font-serif mb-12 text-center'>{project.title}</h1>
       <Gallery images={project.images} title={project.title} />
     </section>

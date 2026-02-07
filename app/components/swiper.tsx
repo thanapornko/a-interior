@@ -17,24 +17,29 @@ const images = [
 
 export default function ImageSlider() {
   return (
-    <Swiper
-      modules={[Autoplay, Pagination]}
-      autoplay={{ delay: 3500 }}
-      loop
-      pagination={{ clickable: true }}
-      className='w-[800px] h-[500px] overflow-hidden'
-    >
-      {images.map((src, index) => (
-        <SwiperSlide key={index}>
-          <Image
-            src={src}
-            alt={`Interior ${index + 1}`}
-            fill
-            // className='object-cover'
-            priority={index === 0}
-          />
-        </SwiperSlide>
-      ))}
-    </Swiper>
+    <div className='w-full'>
+      <Swiper
+        modules={[Autoplay, Pagination]}
+        autoplay={{ delay: 3500, disableOnInteraction: false }}
+        loop
+        pagination={{ clickable: true }}
+        className='w-full aspect-[4/3] sm:aspect-[16/9] rounded-2xl overflow-hidden'
+      >
+        {images.map((src, index) => (
+          <SwiperSlide key={index} className='relative'>
+            <Image
+              src={src}
+              alt={`Interior ${index + 1}`}
+              fill
+              sizes='(max-width: 640px) 100vw,
+                     (max-width: 1024px) 90vw,
+                     800px'
+              className='object-cover'
+              priority={index === 0}
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
   );
 }

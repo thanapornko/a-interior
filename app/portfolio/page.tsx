@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function PortfolioPage() {
   return (
-    <section className='max-w-6xl mx-auto px-6 py-20'>
+    <section className='max-w-6xl mx-auto px-6 py-10'>
       <h1 className='text-4xl font-serif mb-12 text-center'>Portfolio</h1>
 
       <div className='grid md:grid-cols-3 gap-8'>
