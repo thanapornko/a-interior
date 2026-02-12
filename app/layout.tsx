@@ -83,7 +83,7 @@ export default function RootLayout({
                 <li>
                   52 Prachaniwet 3 Soi 14/10, Thasai, Mueang Nonthaburi 11000
                 </li>
-                <li>Tel: 081-633-2711, 081-646-3450</li>
+                <li>Tel: 081-633-2711</li>
                 <li>Line: 0816332711</li>
               </ul>
             </div>
